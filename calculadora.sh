@@ -53,11 +53,19 @@ Operacao(){
 }
 
 main(){
+	
+	#Ler o sinal para fazer a validação
+	sinal=$(lerSinal)
 
-	while [ "$sinal" != "0" ]; do
-		res="___"
-		Operacao
-	done
+	if [ "$sinal" != 0  ]; then
+		while [ "$sinal" != 0 ]; do
+	                res="___"
+        	        Operacao
+        	done
+	else
+		echo "Operação finalizada!"
+	fi
+
 }
 
 # Chamada da função main
